@@ -12,6 +12,7 @@ const MainNavigator = () => {
             <Stack.Screen
                 name='Home'
                 component={Home} 
+                options={{ headerShown: false }} 
             />
             <Stack.Screen 
                 name='Category'

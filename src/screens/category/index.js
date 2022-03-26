@@ -4,15 +4,17 @@ import { styles } from './styles'
 
 import {
     View,
-    Text
+    Text,
+    Button
 } from "react-native"
 
-const Home = () =>{
+const Category = ({navigation}) =>{
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Inicio</Text>
+            <Text style={styles.title}>Categoria</Text>
+            <Button title='Ir a Home' onPress={()=>{navigation.navigate('Home')} }/>
         </View>
             
     )
 }
-export default Home
+export default Category
