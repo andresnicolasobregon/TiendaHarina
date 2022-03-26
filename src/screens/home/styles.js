@@ -10,5 +10,7 @@ export const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         marginVertical: 20,
+        fontFamily: 'OpenSans-Regular',
+        color: '#212121',
     }
 })
