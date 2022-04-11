@@ -3,12 +3,15 @@ import React from 'react'
 import { View, FlatList } from 'react-native'
 import { styles } from './styles'
 import { PRODUCTS } from '../../constants/products'
+import { useSelector, useDispatch, connect } from 'react-redux'
 
 import CategoryProducts from '../../components/molecules/category-products'
 
 const Category = ({ navigation, route }) => {
     const { id } = route.params;
-    const selectedCategory = PRODUCTS.filter(product => product.category === id);
+    const dispatch = useDispatch();
+    const categoryProduct = useSelector(state => state.products.filteredProducts);
+    const selectedCategory = useSelector(state => state.categories.selectedCategory);
     const handleSelectCategory = (product) => {
         navigation.navigate('Product', { product, name: product.name })
     }
